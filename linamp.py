@@ -1,7 +1,12 @@
+# Importação da biblioteca gráfica
 import tkinter as tk
 
-janela = tk.Tk()
-janela.title("Player do BrownJR")
-janela.geometry("300x200")
+# Importação de um seletor de arquivos
+from tkinter import filedialog
 
-janela.mainloop()
+# Função: Carregar os arquivos mp3
+def carregar_arquivos():
+    arquivos = filedialog.askopenfilename(
+        title= "Selecione músicas",
+        filetypes= [("Arquivos MP3", "*.mp3")]
+    )
